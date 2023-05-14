@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
@@ -47,6 +48,21 @@ public class Main {
                         }));
 
         System.out.println(result);
+        displayWithComma();
+
     }
+
+        public static void displayWithComma()
+        {
+            String result="";
+            List<Integer> i = new ArrayList<>();    //  i.add(null);
+            for (int j = 1; j < 9; j++) {
+                i.add(j);
+            }
+
+            for(int x=0, length=i.size(); x<length; x++)
+                result+=(x==0?"":", ") + i.get(x);
+            System.out.println(result);
+        }
 
 }
